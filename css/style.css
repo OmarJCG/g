@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    font-family: 'Comic Neue', cursive;
+}
+
+ :root {
+    --loading-width: 200px;
+    --loading-heigth: 23px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    text-align: center;
+    width: 90vw;
+}
+
+.box {
+    display: inline-block;
+    border: solid black 4px;
+    width: var(--loading-width);
+    background-color: white;
+}
+
+.loading-box {
+    height: var(--loading-heigth);
+    width: var(--loading-width);
+    background-color: blueviolet;
+    /* background-color: aliceblue; */
+    /* animation: loading 5s delay iteration-count direction fill-mode; */
+    animation: loading 5s;
+}
+
+#state-message {
+    font-size: larger;
+    font-weight: bold;
+    color: rgb(109, 109, 109);
+}
+
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: var(--loading-width);
+    }
+}
+
+#title,
+#result {
+    font-size: 2.2rem;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+#result{
+    margin-block: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    color: #8a2be2;
+}
+
+#me {
+    margin-top: 8px;
+    margin-bottom: 14px;
+}
+
+.box {
+    margin-top: 3px;
+}
+
+.button{
+    display: none;
+    border: none;
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+    letter-spacing: 2px;
+    /* font-family: 'Poppins', sans-serif; */
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+    margin-top: 15px;
+}
+
+.footer{
+    visibility: hidden;
+    position: absolute;
+    background-color: #f8e8ce;
+    width: 100%;
+    height: 100vh;
+    clip-path: circle(1% at 50% 62%);
+    transition: clip-path 5s;
+}
+
+.footer-active{
+    visibility: initial;
+    clip-path: circle(150% at 50% 62%);
+    display: flex;
+}
+
+.footer *{
+    background-color: inherit;
+}
+
+.footer__title{
+    font-size: 1.5rem;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 900;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.globos{
+    width: 100px;
+    position: absolute;
+    animation: globo 1.5s infinite alternate;
+}
+
+@keyframes globo{
+    0%{
+        transform: scale(.5) rotate(20deg);
+    }
+}
+
+.globo1{
+    top: 70px;
+    left: 40px;
+}
+
+.globo2{
+    top: 70px;
+    right: 40px;
+}
+
+.globo3{
+    bottom: 70px;
+    left: 40px;
+}
+
+.globo4{
+    bottom: 70px;
+    right: 40px;
+}
+
+
