@@ -27,23 +27,16 @@ main {
 }
 
 .main-maquina {
+    display: inline-block;
+    margin-bottom: 60px;
     text-transform: uppercase;
-    font-size: 0.6rem;
+    letter-spacing: 1px;
+    font-size: .6rem;
     font-family: 'Poppins', sans-serif;
-    /* padding-bottom: 80px; */
     color: #8a2be2;
-    width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 0 auto 30px;
-    font-family: "Courier New";
-    border-right: 0.15em solid #18bdec;
+    border-right: 0.2em solid #8a2be2;
     font-weight: bold;
-    animation: typing 4s steps(20) 1s 1 normal both, blink 1s steps(1) infinite;
-}
-
-p {
-    
+    animation: blink 1s steps(1) infinite;
 }
 
 @keyframes typing {
@@ -72,7 +65,7 @@ p {
 .loading-box {
     height: var(--loading-heigth);
     width: var(--loading-width);
-    background-color: blueviolet;
+    background-color: #8a2be2;
     /* background-color: aliceblue; */
     /* animation: loading 5s delay iteration-count direction fill-mode; */
     animation: loading 5s;
@@ -159,6 +152,7 @@ p {
 
 .footer__container {
     font-size: 1.5rem;
+    font-weight: bold;
     font-family: 'Indie Flower', cursive;
     letter-spacing: 1px;
     position: absolute;
@@ -168,9 +162,14 @@ p {
     text-align: center;
 }
 
+.footer__container img,
+.footer__container p{
+    margin-bottom: 10px;
+}
+
 
 .globos {
-    width: 100px;
+    width: 80px;
     position: absolute;
     animation: globo 1.5s infinite alternate;
 }
@@ -182,23 +181,27 @@ p {
 }
 
 .globo1 {
-    top: 70px;
-    left: 40px;
+    top: 10px;
+    left: 10px;
 }
 
 .globo2 {
-    top: 70px;
-    right: 40px;
+    top: 10px;
+    right: 10px;
 }
 
 .globo3 {
-    bottom: 70px;
-    left: 40px;
+    bottom: 10px;
+    left: 10px;
 }
 
 .globo4 {
-    bottom: 70px;
-    right: 40px;
+    bottom: 10px;
+    right: 10px;
+}
+
+.footer__pastel{
+    width: 100px;
 }
 
 .footer__button {
@@ -207,7 +210,7 @@ p {
     background-color: black;
     color: #fff;
     letter-spacing: 2px;
-    padding: 1rem 2.5rem;
+    padding: 1rem 2rem;
     border-radius: 2rem;
     margin-top: 15px;
     font-weight: 900;
@@ -330,5 +333,28 @@ p {
 
     100% {
         transform: rotate(-1deg);
+    }
+}
+
+
+/* ********************************************************************* */
+@media screen and (max-width: 350px) {
+    .regalos #title{
+        font-size: 1rem;
+    }
+
+    .regalos .span{
+        font-size: .9rem;
+    }
+
+    .resultado{
+        font-size: .9rem;
+    }
+}
+
+@media screen and (min-width: 420px) {
+
+    .regalos{
+        padding: 0;
     }
 }
